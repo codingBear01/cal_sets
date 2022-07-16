@@ -3,7 +3,7 @@ const pushUp = (cnt) => {
   for (let i = 1; i <= cnt; i++) {
     if (!sets[i]) sets[i] = [];
 
-    sets[i][0] = cnt * 2 - i + 1;
+    sets[i][0] = cnt - i + 1;
     sets[i][1] = i;
   }
 
@@ -20,7 +20,7 @@ const pullUp = (cnt) => {
   return sets;
 };
 
-console.log('pushUp:', pushUp(5));
+console.log('pushUp:', pushUp(10));
 console.log('pullUp:', pullUp(5));
 
 /* 하체(스쿼트, 런지)
