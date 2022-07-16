@@ -1,6 +1,6 @@
 const pushUp = (cnt) => {
   const sets = {};
-  for (let i = 1; i <= cnt; i++) {
+  for (let i = 1; i <= Math.ceil(cnt / 2); i++) {
     if (!sets[i]) sets[i] = [];
 
     sets[i][0] = cnt - i + 1;
@@ -20,7 +20,7 @@ const pullUp = (cnt) => {
   return sets;
 };
 
-console.log('pushUp:', pushUp(10));
+console.log('pushUp:', pushUp(5));
 console.log('pullUp:', pullUp(5));
 
 /* 하체(스쿼트, 런지)
